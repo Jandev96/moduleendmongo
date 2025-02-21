@@ -1,10 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 3000
+
 const router=require("./src/routes/taskroutes")
 const mongoose = require('mongoose')
 require('dotenv').config()
 const DBCONNECTIONLINK=process.env.DBCONNECTIONLINK
+const port =process.env.PORT
 
 mongoose.connect(DBCONNECTIONLINK)
 .then(()=>{
